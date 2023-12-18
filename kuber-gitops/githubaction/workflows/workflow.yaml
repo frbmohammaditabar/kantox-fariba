@@ -1,0 +1,23 @@
+name: Continuous Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build and push Docker image
+        run: |
+          docker build -t your-registry/your-image:${{ github.sha }} .
+          docker push your-registry/your-image:${{ github.sha }}
+
+      - name: Deploy to Minikube
+        run: kubectl apply -f deployment.yaml
+

@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hello-world-app
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/yourusername/your-repo.git
+    path: path/to/kubernetes-manifests
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+
