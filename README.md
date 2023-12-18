@@ -1,2 +1,2 @@
-# helloworld-kantox-fariba
+# kantox-fariba
 My Repository for kantox challenge.
