@@ -9,17 +9,7 @@ functionjedi.py
      https://awspolicygen.s3.amazonaws.com/policygen.html
      IAM Policy > Amazon CloudWatch Logs > All Services> Add statement> Generate Policy
 
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "Stmt1702550400569",
-      "Action": "*",
-      "Effect": "Allow",
-      "Resource": "*"
-    }
-  ]
-}
+
 
 
  Policy = I will open for AWS CloudWatch Logs
@@ -47,10 +37,6 @@ terraform apply
 
 7. Testing lambda function and check CloudWatch Logs
 
-Access key:
-AKIAUSBC7FPAMZARS5AT
-Secret Key:
-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
 8. Delete
 
 terraform destroy  
